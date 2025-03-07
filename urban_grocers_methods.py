@@ -1,8 +1,8 @@
 import data
-from configuration import BASE_URL, KITS
+from configuration import *
 import requests
 
 
-def get_all_kits():
-    response = requests.get(BASE_URL + KITS + data.card_id_1)
+def get_all_kits(card_id: str):
+    response = requests.get(BASE_URL + KITS + CARD_ID_PARAM + card_id)
     return response
